@@ -1,0 +1,33 @@
+.Footer--characters{
+    width:8rem;
+    margin-left: 2rem;
+    margin-top: 2rem;
+    z-index: 10;
+    position: absolute;
+    cursor: pointer;
+}
+
+.Footer--characters-animation{
+    animation-name: move_to;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    
+}
+
+@keyframes move_to{
+    0%{
+        transform: translateX(0);
+    }
+    // 30%{
+    //     transform: translateX(30rem);
+    // }
+    // 60%{
+    //     transform: translateX(60rem);
+    // }
+    // 90%{
+    //     transform: translateX(90rem);
+    // }
+    100%{
+        transform: translateX(360rem);
+    }
+}
