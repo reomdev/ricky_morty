@@ -26,14 +26,14 @@ const Header = () => {
       </div>
       {location.pathname == '/favorites' ? (
         <button className="btn btn-outline-light" onClick={() => navigate('/')}>
-          Home
+          Inicio
         </button>
       ) : (
         <button
           className="btn btn-outline-light"
           onClick={() => navigate('/favorites')}
         >
-          Favorites
+          Favoritos
         </button>
       )}
     </header>

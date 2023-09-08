@@ -12,16 +12,20 @@ const getCharacters = async () => {
 };
 
 const getCharacter = async (id) => {
-  const response = await fetch(`${process.env.API}/character/${id}`);
+  try {
+    const response = await fetch(`${process.env.API}/character/${id}`);
 
-  if (!response.ok) {
-    const message = `An error has ocurred : ${response.status}`;
-    throw new Error(message);
+    if (!response.ok) {
+      const message = `An error has ocurred : ${response.status}`;
+      throw new Error(message);
+    }
+
+    const characters = await response.json();
+
+    return characters;
+  } catch (error) {
+    return { status: 500, error };
   }
-
-  const characters = await response.json();
-
-  return characters;
 };
 
 export { getCharacters, getCharacter };

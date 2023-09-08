@@ -30,7 +30,6 @@ const Home = () => {
   };
 
   useEffect(() => {
-    console.log('useEffect');
     getCharactersService();
   }, []);
 

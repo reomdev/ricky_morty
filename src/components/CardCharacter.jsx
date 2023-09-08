@@ -55,7 +55,7 @@ const CardCharacter = ({ character }) => {
           className="btn btn-primary Card--button"
           onClick={() => navigate(`/character/${character.id}`)}
         >
-          See character
+          Ver character
         </button>
       </div>
     </div>
